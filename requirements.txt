@@ -1,5 +1,10 @@
+python-dwca-reader
 pandas
 SQLAlchemy
 mysqlclient
 click
-pandarallel
+tqdm
+matplotlib
+networkx
+bs4
+difflib

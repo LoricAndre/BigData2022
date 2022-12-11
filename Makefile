@@ -17,9 +17,9 @@ install: requirements.txt
 load: install species.sql
 	mysql -u $(MYSQL_USER) $(MYSQL_DB) < $(DB_FILE) || true
 
-get_parents: load
-	./utils.py get_parents
+get_ancestors: load cli.py
+	./cli.py get_ancestors
 
 save:
-	mysqldump -u $(MYSQL_USER) $(MYSQL_DB) > $(shell ./utils.py iter_filename $(DB_FILE))
+	mysqldump -u $(MYSQL_USER) $(MYSQL_DB) > $(shell ./cli.py iter_filename $(DB_FILE))
 
