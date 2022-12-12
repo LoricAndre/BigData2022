@@ -14,7 +14,7 @@ def cli():
 def get_ancestors():
     df = utils.sql.load()
     df = utils.tree.get_ancestors(df)
-    df.to_json("species.json")
+    df.to_json("data/animals.json")
 
 
 @cli.command(name="iter_filename")
