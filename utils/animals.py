@@ -27,5 +27,5 @@ def search(query, lang="fr"):
         data = requests.get(url, params=params).json()
         soup = BeautifulSoup(data['parse']['text']['*'], 'html.parser')
         infoboxes = soup.select('.taxobox_classification')
-        if len(infoboxes) > 0:
+        if infoboxes != None and len(infoboxes) > 0:
             return infoboxes[-1].b.text

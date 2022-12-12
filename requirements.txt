@@ -6,5 +6,7 @@ click
 tqdm
 matplotlib
 networkx
+pydot
 bs4
-difflib
+graphviz
+glob
